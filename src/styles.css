@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.section {
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 23px;
+}
+
+p.text {
+    margin: 0;
+}

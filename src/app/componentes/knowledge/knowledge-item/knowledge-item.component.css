@@ -1,0 +1,29 @@
+.knowledge-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+}
+
+.knowledge-item-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    border: 1px solid rgb(13, 13, 14);
+    border-radius: 50%;
+    background-color: #e9ecf0;
+}
+
+.knowledge-item-logo {
+    height: 50px;
+    width: 50px;
+}
+
+.knowledge-item-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
