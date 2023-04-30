@@ -1,0 +1,18 @@
+<div class="main-info-contact-dialog-container">
+  <h4 class="title">Información de contacto <fa-icon class="close-icon" [icon]="faTimes" (click)="onCloseClick()"></fa-icon></h4>
+
+  <hr class="horizontal-line">
+
+  <div mat-dialog-content>
+    <div class="main-info-contact-dialog-item">
+      <img class="contact-icon" src="../../../../assets/emailIcon.png" alt="">
+      <a class="contact-text" [href] = "linkEmail">{{data.email}}</a>
+    </div>
+
+    <div class="main-info-contact-dialog-item">
+      <img class="contact-icon" src="../../../../assets/telefonoIcon.png"  alt="">
+      <a class="contact-text" [href]="linkWhatsapp" target="_blank">+{{data.telefono}}</a>
+    </div>
+    
+  </div>    
+</div>

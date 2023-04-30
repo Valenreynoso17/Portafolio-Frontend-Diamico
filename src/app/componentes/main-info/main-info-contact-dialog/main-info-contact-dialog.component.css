@@ -1,0 +1,46 @@
+.main-info-contact-dialog-container {
+    padding: 20px 20px 0 20px;
+}
+
+.horizontal-line {
+    margin-bottom: 0;
+}
+
+.close-icon {
+    float: right;
+    cursor: pointer;
+    padding: 0;
+}
+
+.title {
+    line-height: 1;
+}
+
+.main-info-contact-dialog-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.main-info-contact-dialog-item:last-child {
+    padding-bottom: 0;
+}
+
+.contact-text {
+    padding: 0 0 0 10px;
+    margin: 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #5b5b5b;
+    font-style: italic;
+}
+
+.contact-text:hover {
+    text-decoration: underline;
+    color: #a8a8a8;
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+}
