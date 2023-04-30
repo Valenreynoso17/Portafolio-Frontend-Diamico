@@ -1,12 +1,9 @@
 <!-- knowledge section -->
 <div class="card section">
-    <div class="card-body">
-      <h5 class="card-title">Conocimientos</h5>
-      <div class="knowledge-list-containter">
-        <app-knowledge-item></app-knowledge-item>
-        <app-knowledge-item></app-knowledge-item>
-        <app-knowledge-item></app-knowledge-item>
-        <app-knowledge-item></app-knowledge-item>
-      </div>
+  <div class="card-body">
+    <app-card-title titleText="Conocimientos" (editEvent)="onEditEvent()"></app-card-title>
+    <div class="knowledge-list-containter" >
+      <app-knowledge-item *ngFor="let conocimiento of listaConocimientos" [conocimiento]="conocimiento"></app-knowledge-item>
     </div>
   </div>
+</div>
