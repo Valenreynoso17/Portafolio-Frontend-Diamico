@@ -1,12 +1,12 @@
 <!-- Expertise and education section -->
 <div class="card section">
     <div class="card-body">
-        <h5 class="card-title">Experiencia</h5>
-        <app-exp-edu-item></app-exp-edu-item>
+        <app-card-title titleText="Experiencia" (editEvent)="onExperienceEditEvent()"></app-card-title>
+        <app-exp-edu-item *ngFor="let experiencia of listaExperiencia" [expEduItem]="experiencia"></app-exp-edu-item>
     </div>
 
     <div class="card-body">
-        <h5 class="card-title">Educación</h5>
-        <app-exp-edu-item></app-exp-edu-item>
+        <app-card-title titleText="Educacion" (editEvent)="onEducationEditEvent()"></app-card-title>
+        <app-exp-edu-item *ngFor="let educacion of listaEducacion" [expEduItem]="educacion"></app-exp-edu-item>
     </div>
 </div>
