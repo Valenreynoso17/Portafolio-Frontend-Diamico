@@ -1,0 +1,15 @@
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-actions {
+    justify-content: end;
+    padding-right: 24px;
+}

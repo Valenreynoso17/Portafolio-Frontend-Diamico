@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Login</h1>
+
+<form class="form" [formGroup]="loginForm" (ngSubmit)="login($event)">
+    <div mat-dialog-content class="dialog-content">
+        <mat-form-field appearance="fill">
+            <mat-label for="emailControl">Email</mat-label>
+            <input matInput type="email" formControlName="emailControl">
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+            <mat-label for="passwordControl">Contraseña</mat-label>
+            <input matInput type="text" formControlName="passwordControl">
+        </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions class="dialog-actions">
+        <button mat-button type="button" (click)="onCloseClick()">Cancelar</button>
+        <button mat-flat-button color="primary" [disabled]="!loginForm.valid" type="submit" cdkFocusInitial>Ingresar</button>
+    </div>
+</form>
+
+
