@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Persona } from 'src/app/model/Persona';
 
 @Component({
   selector: 'app-main-container',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class MainContainerComponent {
 
+  @Input() persona: Persona;
+  
 }
