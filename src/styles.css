@@ -1,3 +1,5 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -9,8 +11,19 @@ body {
 .card-title {
     font-weight: 600;
     font-size: 23px;
+    display: flex;
+    justify-content: space-between;
 }
 
 p.text {
     margin: 0;
+}
+
+.edit-button {
+    width: 24px;
+    height: 24px;
+}
+
+.edit-button:hover {
+    cursor: pointer;
 }
