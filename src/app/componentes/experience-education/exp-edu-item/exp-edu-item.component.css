@@ -1,7 +1,7 @@
 .expertise-education-item {
     display: flex;
     align-items: center;
-    margin: 0px 35px;
+    margin: 0px 35px 15px 35px;
 }
 
 .expertise-education-item-logo {
