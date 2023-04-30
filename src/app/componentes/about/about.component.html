@@ -1,7 +1,7 @@
 <!-- About section -->
 <div class="section card">
-    <div class="card-body">
-      <h5 class="card-title">Acerca de</h5>
-      <p class="text">Tengo 22 años, soy estudiante de quinto año de Ingeniería en Sistemas de Información y estoy trabajando en una empresa de desarrollo de software llamada Flowing Code.</p>
-    </div>
+  <div class="card-body">
+    <app-card-title titleText="Acerca de" (editEvent)="onEditEvent()"></app-card-title>
+    <p class="text">{{personAbout}}</p>
   </div>
+</div>
