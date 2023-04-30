@@ -11,6 +11,13 @@
     border-radius: 50%;
 }
 
+#edit-button-main-info {
+    position: absolute;
+    align-self: flex-end;
+    margin-top: 416px;
+    margin-right: 16px;
+}
+
 .profile-picture-container {
     width: 150px;
     height: 150px;
@@ -29,6 +36,12 @@
 .main-info-name {
     
 }
+
 .main-info-contact {
+    cursor: pointer;
     text-decoration: none;
+}
+
+.main-info-contact:hover {
+    text-decoration: underline;
 }
