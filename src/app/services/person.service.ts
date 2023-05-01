@@ -11,6 +11,14 @@ const httpOptionsWithoutAuth = {
   })
 }
 
+const httpOptionsWithAuth = {
+  headers: new HttpHeaders({
+    'Content-Type':'application/json',
+    'Access-Control-Allow-Origin':'http://localhost:8080/',
+    'Authorization':localStorage['auth_token']
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,5 +32,8 @@ export class PersonService {
     return this.http.get<Persona>(this.baseApiUrl, httpOptionsWithoutAuth);
   }
 
+  editar(persona: Persona): Observable<void> {
+    return this.http.put<any>(this.baseApiUrl + "persona/editar", persona, httpOptionsWithAuth);
+  }
   
 }
