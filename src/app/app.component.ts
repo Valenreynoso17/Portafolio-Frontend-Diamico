@@ -20,4 +20,10 @@ export class AppComponent implements OnInit{
       this.persona = p;
     })
   }
+
+  actualizarPersona() {
+    this.personService.getPersona().subscribe(p => {
+      this.persona = p;
+    })
+  }
 }

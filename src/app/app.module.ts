@@ -23,7 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginDialogComponent } from './componentes/login-dialog/login-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardTitleComponent } from './componentes/util/card-title/card-title.component';
-import { EditDialogComponent } from './componentes/util/edit-dialog/edit-dialog.component';
+import { EditMainInfoDialogComponent } from './componentes/util/edit-main-info-dialog/edit-main-info-dialog.component';
+import { EditAboutDialogComponent } from './componentes/util/edit-about-dialog/edit-about-dialog.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { EditDialogComponent } from './componentes/util/edit-dialog/edit-dialog.
     MainInfoContactDialogComponent,
     LoginDialogComponent,
     CardTitleComponent,
-    EditDialogComponent
+    EditMainInfoDialogComponent,
+    EditAboutDialogComponent
   ],
   imports: [
     BrowserModule,

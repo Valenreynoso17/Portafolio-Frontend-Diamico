@@ -1,2 +1,2 @@
 <app-navbar *ngIf="!!persona" [persona]="persona"></app-navbar>
-<app-main-container *ngIf="!!persona" [persona]="persona"></app-main-container>
+<app-main-container *ngIf="!!persona" [persona]="persona" (actualizarPersonaEvent)="actualizarPersona()"></app-main-container>
