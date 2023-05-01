@@ -1,0 +1,49 @@
+<div class="main-info-contact-dialog-container">
+    <h4 class="title">Editar "Información principal"</h4>
+
+    <hr class="horizontal-line">
+
+    <form class="form" [formGroup]="editForm" (ngSubmit)="edit($event)">
+        <div mat-dialog-content class="dialog-content">
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="personNameControl">Nombre y apellido</mat-label>
+                <input matInput formControlName="personNameControl">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="personActualSituationControl">Situación actual</mat-label>
+                <input matInput formControlName="personActualSituationControl">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="personLocationControl">Localidad</mat-label>
+                <input matInput formControlName="personLocationControl">
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="personEmailControl">Email</mat-label>
+                <input matInput type="email" formControlName="personEmailControl">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="personPhoneNumberControl">Teléfono</mat-label>
+                <input matInput type="number" formControlName="personPhoneNumberControl">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="profilePictureUrlControl">Link de foto de perfil</mat-label>
+                <input matInput formControlName="profilePictureUrlControl">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="bannerPictureUrlControl">Link de foto de portada</mat-label>
+                <input matInput formControlName="bannerPictureUrlControl">
+            </mat-form-field>
+        </div>
+
+        <div mat-dialog-actions class="dialog-actions">
+            <button mat-button type="button" (click)="onCloseClick()">Cancelar</button>
+            <button mat-flat-button color="primary" [disabled]="!editForm.valid" type="submit" cdkFocusInitial>Guardar</button>
+        </div>
+    </form>    
+</div>
