@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { Persona } from 'src/app/model/Persona';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MainInfoContactDialogComponent } from './main-info-contact-dialog/main-info-contact-dialog.component';
 import { AuthorizationService } from 'src/app/services/authorization.service';
-import { EditDialogComponent } from '../util/edit-dialog/edit-dialog.component';
+import { EditMainInfoDialogComponent } from '../util/edit-main-info-dialog/edit-main-info-dialog.component';
 
 @Component({
   selector: 'app-main-info',
@@ -13,52 +13,31 @@ import { EditDialogComponent } from '../util/edit-dialog/edit-dialog.component';
 export class MainInfoComponent implements OnInit {
 
   @Input() persona: Persona;
-
-  bannerPictureUrl: String = "";
-  profilePictureUrl: String = "";
-
-  personName: String = "";
-  personActualSituation: String = "";
-  personLocation: String = "";
-  personEmail: String = "";
-  personPhoneNumber: String = "";
+  @Output() actualizarPersonaEvent = new EventEmitter();
 
   constructor(public dialog: MatDialog, public authService: AuthorizationService) { }
 
-  ngOnInit(): void {
-
-    this.bannerPictureUrl = this.persona.fotoPortada;
-    this.profilePictureUrl = this.persona.fotoPerfil;
-
-    this.personName = this.persona.nombre;
-    this.personActualSituation = this.persona.situacionActual;
-    this.personLocation = this.persona.ubicacion;
-    this.personEmail = this.persona.email;
-    this.personPhoneNumber = this.persona.telefono;
-    
-  }
+  ngOnInit(): void { }
 
   openContactInformationDialog(): void {
     const mainInforContactDialogRef = this.dialog.open(MainInfoContactDialogComponent, {
-      data: { email: this.personEmail, telefono: this.personPhoneNumber },
+      data: { email: this.persona.email, telefono: this.persona.telefono },
       autoFocus: false
     });
   }
 
   onEditEvent() {
-    console.log("Main info edit event");
-
-    const mainInforContactDialogRef = this.dialog.open(EditDialogComponent, {
-      data: { 
-        bannerPictureUrl: this.bannerPictureUrl,
-        profilePictureUrl: this.profilePictureUrl,
-        personName: this.personName,
-        personActualSituation: this.personActualSituation,
-        personLocation: this.personLocation,
-        personEmail: this.personEmail,
-        personPhoneNumber: this.personPhoneNumber},
+    const mainInforContactDialogRef = this.dialog.open(EditMainInfoDialogComponent, {
+      data: { persona: this.persona },
       autoFocus: false
     });
+
+    mainInforContactDialogRef.afterClosed().subscribe(seActualizoPersona => {
+      if(seActualizoPersona) {
+        this.actualizarPersonaEvent.emit();
+      }
+    });
   }
+
   
 }

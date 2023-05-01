@@ -1,14 +1,14 @@
 <!-- Main info section -->
 <div class="card section">
-  <img id="banner" [src]="bannerPictureUrl" class="card-img-top" alt="Banner picture">
+  <img id="banner" [src]="persona.fotoPortada" class="card-img-top" alt="Banner picture">
   <div class="profile-picture-container">
-    <img id="profile-picture" [src]="profilePictureUrl" alt="Profile picture">
+    <img id="profile-picture" [src]="persona.fotoPerfil" alt="Profile picture">
   </div>
   <img *ngIf="authService.isLoggedIn | async" (click)="onEditEvent()" id="edit-button-main-info" class="edit-button" src="../../../assets/editar.svg" alt="">
   <div class="card-body main-information-container">
-    <h3 class="main-info-name">{{personName}}</h3>
-    <p class="text">{{personActualSituation}}</p>
-    <p class="text">{{personLocation}}</p>
+    <h3 class="main-info-name">{{persona.nombre}}</h3>
+    <p class="text">{{persona.situacionActual}}</p>
+    <p class="text">{{persona.ubicacion}}</p>
     <a class="main-info-contact" (click)="openContactInformationDialog()">Información de contacto</a>
   </div>
 </div>
