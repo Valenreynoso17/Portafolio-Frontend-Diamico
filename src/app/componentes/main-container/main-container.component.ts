@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { Persona } from 'src/app/model/Persona';
+import { PersonService } from 'src/app/services/person.service';
 
 @Component({
   selector: 'app-main-container',
@@ -9,5 +10,21 @@ import { Persona } from 'src/app/model/Persona';
 export class MainContainerComponent {
 
   @Input() persona: Persona;
+  @Output() actualizarPersonaEvent = new EventEmitter;  
+
+  constructor(private personaService: PersonService) {}
+
+  actualizarPersona() {
+    this.actualizarPersonaEvent.emit();
+  }
+
+  editAbout(nuevoAcercaDe: String) {
+
+    this.persona.acercaDe = nuevoAcercaDe;
+
+    this.personaService.editar(this.persona).subscribe(res => {
+      this.actualizarPersona();
+    })
+  }
   
 }
