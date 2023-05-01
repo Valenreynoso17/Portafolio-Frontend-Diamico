@@ -3,5 +3,5 @@
     <app-about [acercaDe]="persona.acercaDe" (aboutEditEvent)="editAbout($event)"></app-about>
     <app-experience-education [listaExperiencia]="persona.listaExperiencia" [listaEducacion]="persona.listaEducacion"></app-experience-education>
     <app-knowledge [listaConocimientos]="persona.listaConocimiento"></app-knowledge>
-    <app-projects [listaProyectos]="persona.listaProyectos"></app-projects>
+    <app-projects [idPersona]="persona.id" [listaProyectos]="persona.listaProyectos"></app-projects>
 </div>

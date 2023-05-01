@@ -4,6 +4,7 @@ export class Proyecto {
         public id: number,
         public nombre: String,
         public descripcion: String,
-        public link: String
+        public link: String,
+        public idPersona: number
     ) {}
 }

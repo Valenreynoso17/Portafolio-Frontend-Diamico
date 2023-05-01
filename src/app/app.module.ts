@@ -25,6 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardTitleComponent } from './componentes/util/card-title/card-title.component';
 import { EditMainInfoDialogComponent } from './componentes/util/edit-main-info-dialog/edit-main-info-dialog.component';
 import { EditAboutDialogComponent } from './componentes/util/edit-about-dialog/edit-about-dialog.component';
+import { EditProjectsDialogComponent } from './componentes/util/edit-projects-dialog/edit-projects-dialog.component';
+import { EditProjectsDialogItemComponent } from './componentes/util/edit-projects-dialog/edit-projects-dialog-item/edit-projects-dialog-item.component';
+import { CreateProjectDialogComponent } from './componentes/util/create-project-dialog/create-project-dialog.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { EditAboutDialogComponent } from './componentes/util/edit-about-dialog/e
     LoginDialogComponent,
     CardTitleComponent,
     EditMainInfoDialogComponent,
-    EditAboutDialogComponent
+    EditAboutDialogComponent,
+    EditProjectsDialogComponent,
+    EditProjectsDialogItemComponent,
+    CreateProjectDialogComponent
   ],
   imports: [
     BrowserModule,
