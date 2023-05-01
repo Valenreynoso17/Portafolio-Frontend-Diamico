@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, Output } from '@angular/core';
+import { Component, EventEmitter, Inject, Output, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { PersonService } from 'src/app/services/person.service';
@@ -21,6 +21,11 @@ export class EditAboutDialogComponent {
       this.editForm = this.formBuilder.group({
         personAboutControl: [data.textoAcercaDe, [Validators.required]]
       })
+
+      this.dialogRef.backdropClick().subscribe(() => {
+        this.dialogRef.close({cambio: false});
+      })
+      
   }
 
   edit(event: Event) {
@@ -37,6 +42,11 @@ export class EditAboutDialogComponent {
   }
 
   onCloseClick(): void {
+    this.dialogRef.close({cambio: false});
+  } 
+
+  @HostListener('document:keydown.escape', ['window:keydown.esc'])
+  onEscKeydown() {
     this.dialogRef.close({cambio: false});
   }
 
