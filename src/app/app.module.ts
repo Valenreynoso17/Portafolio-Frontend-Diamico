@@ -28,6 +28,8 @@ import { EditAboutDialogComponent } from './componentes/util/edit-about-dialog/e
 import { EditProjectsDialogComponent } from './componentes/util/edit-projects-dialog/edit-projects-dialog.component';
 import { EditProjectsDialogItemComponent } from './componentes/util/edit-projects-dialog/edit-projects-dialog-item/edit-projects-dialog-item.component';
 import { CreateProjectDialogComponent } from './componentes/util/create-project-dialog/create-project-dialog.component';
+import { EditProjectDialogItemDialogComponent } from './componentes/util/edit-projects-dialog/edit-projects-dialog-item/edit-project-dialog-item-dialog/edit-project-dialog-item-dialog.component';
+import { EditKnowledgeDialogComponent } from './componentes/util/edit-knowledge-dialog/edit-knowledge-dialog.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { CreateProjectDialogComponent } from './componentes/util/create-project-
     EditAboutDialogComponent,
     EditProjectsDialogComponent,
     EditProjectsDialogItemComponent,
-    CreateProjectDialogComponent
+    CreateProjectDialogComponent,
+    EditProjectDialogItemDialogComponent,
+    EditKnowledgeDialogComponent
   ],
   imports: [
     BrowserModule,

@@ -20,11 +20,11 @@ export class EditAboutDialogComponent {
 
       this.editForm = this.formBuilder.group({
         personAboutControl: [data.textoAcercaDe, [Validators.required]]
-      })
+      });
 
       this.dialogRef.backdropClick().subscribe(() => {
         this.dialogRef.close({cambio: false});
-      })
+      });
       
   }
 

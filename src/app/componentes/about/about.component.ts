@@ -19,7 +19,7 @@ export class AboutComponent {
     const editAboutDialogRef = this.dialog.open(EditAboutDialogComponent, {
       data: { textoAcercaDe: this.acercaDe },
       autoFocus: false
-    })
+    });
 
     editAboutDialogRef.afterClosed().subscribe(res => {
       if(res.cambio) {

@@ -33,6 +33,7 @@ export class LoginDialogComponent {
       this.authService.login(this.Email, this.Password).subscribe(res => {
         this.dialogRef.close();
         alert("Usuario ingresado con éxito");
+        window.location.reload()
       })
     } else {
       this.loginForm.markAllAsTouched();
