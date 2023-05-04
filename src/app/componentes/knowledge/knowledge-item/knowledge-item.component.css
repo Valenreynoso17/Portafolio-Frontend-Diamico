@@ -4,6 +4,11 @@
     align-items: center;
     flex-direction: column;
     width: 100px;
+    transition: all .2s ease-in-out; 
+}
+
+.knowledge-item:hover {
+    transform: scale(1.2); 
 }
 
 .knowledge-item-circle {
@@ -15,6 +20,31 @@
     border: 1px solid rgb(13, 13, 14);
     border-radius: 50%;
     background-color: #e9ecf0;
+}
+
+.knowledge-item-circle:hover {
+    opacity: 0.4;
+}
+
+.edit-button-container{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-button {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+}
+
+#edit-button:hover {
+    opacity: 1;
 }
 
 .knowledge-item-logo {

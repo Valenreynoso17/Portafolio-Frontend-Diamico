@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { Conocimiento } from 'src/app/model/Conocimiento';
 
 @Component({
@@ -6,16 +6,11 @@ import { Conocimiento } from 'src/app/model/Conocimiento';
   templateUrl: './knowledge-item.component.html',
   styleUrls: ['./knowledge-item.component.css']
 })
-export class KnowledgeItemComponent implements OnInit {
+export class KnowledgeItemComponent {
+
+  constructor() {}
 
   @Input() conocimiento: Conocimiento;
 
-  logoUrl: String = "";
-  name: String = "";
-
-  ngOnInit(): void {
-    this.logoUrl = this.conocimiento.logo;
-    this.name = this.conocimiento.nombre;
-  }
   
 }
