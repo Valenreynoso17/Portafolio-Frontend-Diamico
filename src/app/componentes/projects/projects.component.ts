@@ -16,10 +16,14 @@ export class ProjectsComponent {
 
   constructor(public authService: AuthorizationService, public dialog:MatDialog) { }
 
-  onEditEvent() {
+  onMenuEditarClickedEvent() {
     const editProjectDialogRef = this.dialog.open(EditProjectsDialogComponent, {
       data: { idPersona: this.idPersona, listaProyectos: this.listaProyectos },
       autoFocus: false
-    })
+    });
+
+    editProjectDialogRef.afterClosed().subscribe(res => {
+      this.listaProyectos = res.listaProyectos;
+    });
   }
 }

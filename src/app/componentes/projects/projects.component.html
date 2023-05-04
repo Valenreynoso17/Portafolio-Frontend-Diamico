@@ -1,7 +1,7 @@
 <!-- Projects section-->
 <div class="card section">
   <div class="card-body">
-    <app-card-title titleText="Proyectos" (editEvent)="onEditEvent()"></app-card-title>
+    <app-card-title titleText="Proyectos" (editEvent)="onMenuEditarClickedEvent()"></app-card-title>
     <app-projects-item *ngFor="let proyecto of listaProyectos" [proyecto]="proyecto"></app-projects-item>
   </div>
 </div>
