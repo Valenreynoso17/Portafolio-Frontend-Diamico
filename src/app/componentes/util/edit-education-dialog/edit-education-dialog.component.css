@@ -1,0 +1,25 @@
+.main-info-contact-dialog-container {
+    padding: 20px 20px 0px 20px;
+}
+
+.dialog-content {
+    padding: 20px 20px 0px 20px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.horizontal-line {
+    margin-bottom: 0;
+}
+
+.title {
+    line-height: 1;
+}
+
+.dialog-actions {
+    justify-content: end;
+    padding-right: 24px;
+}

@@ -1,0 +1,13 @@
+<div class="main-info-contact-dialog-container">
+    <h4 class="title">Editar Educacion</h4>
+  
+    <hr class="horizontal-line">
+  
+    <div class="dialog-content">
+        <app-edit-education-dialog-item *ngFor="let educacion of listaEducacion" [educacion]="educacion" (eliminarEducacionEvent)="onEliminarEducacionEvent($event)" (editarEducacionEvent)="onEditarEducacionEvent($event)"></app-edit-education-dialog-item>
+    </div>
+
+    <div mat-dialog-actions class="dialog-actions">
+        <button mat-flat-button color="primary" type="button" (click)="onAgregarEducacionClick()">Agregar educacion</button>
+    </div>
+</div>

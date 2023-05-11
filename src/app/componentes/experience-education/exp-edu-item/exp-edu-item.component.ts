@@ -1,28 +1,21 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy, OnChanges, SimpleChanges } from '@angular/core';
 import { Educacion } from 'src/app/model/Educacion';
 import { Experiencia } from 'src/app/model/Experiencia';
 
 @Component({
   selector: 'app-exp-edu-item',
   templateUrl: './exp-edu-item.component.html',
-  styleUrls: ['./exp-edu-item.component.css']
+  styleUrls: ['./exp-edu-item.component.css'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
-export class ExpEduItemComponent implements OnInit {
+export class ExpEduItemComponent {
 
   @Input() expEduItem: (Experiencia|Educacion);
-
-  logoUrl: String = "";
-  title: String = "";
-  description: String = "";
-  period: String = "2022 - Actualidad";
 
   fechaInicio: Date;
   fechaFin: Date;
 
-  ngOnInit(): void {
-    this.logoUrl = this.expEduItem?.logo;
-    this.title = this.expEduItem?.nombre;
-    this.description = this.expEduItem?.descripcion;
+  /* ngOnInit(): void {
 
     if(this.expEduItem != undefined) {
 
@@ -49,7 +42,7 @@ export class ExpEduItemComponent implements OnInit {
 
     }
     
-  }
+  } */
 
   getMes(numero: number): String {
 

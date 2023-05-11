@@ -1,0 +1,50 @@
+<div class="main-info-contact-dialog-container">
+    <h4 class="title">Crear Experiencia</h4>
+  
+    <hr class="horizontal-line">
+  
+    <form class="form" [formGroup]="createForm" (ngSubmit)="create($event)">
+        <div mat-dialog-content class="dialog-content">
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="experienceNameControl">Nombre experiencia</mat-label>
+                <input matInput formControlName="experienceNameControl" cdkFocusInitial>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="experienceDescriptionControl">Descripcion</mat-label>
+                <input matInput formControlName="experienceDescriptionControl">
+            </mat-form-field>
+
+            <div class="dates-container">
+                <mat-form-field appearance="outline" class="date">
+                    <mat-label for="experienceStartDateControl">Fecha inicio</mat-label>
+                    <input matInput formControlName="experienceStartDateControl" [matDatepicker]="experienceStartPicker">
+                    <mat-hint>MM/DD/AAAA</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="experienceStartPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #experienceStartPicker color="primary"></mat-datepicker>
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline" class="date">
+                    <mat-label for="experienceEndDateControl">Fecha fin</mat-label>
+                    <input matInput formControlName="experienceEndDateControl" [matDatepicker]="experienceEndPicker">
+                    <mat-hint>MM/DD/AAAA</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="experienceEndPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #experienceEndPicker color="primary"></mat-datepicker>
+                </mat-form-field>
+    
+                <mat-checkbox formControlName="experienceIsActualControl" color="primary" (change)="toggleActual($event)">Actual?</mat-checkbox>
+            </div>
+
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="experienceLinkControl">Link logo</mat-label>
+                <input matInput formControlName="experienceLinkControl">
+            </mat-form-field>
+        </div>
+  
+        <div mat-dialog-actions class="dialog-actions">
+            <button mat-button type="button" (click)="onCloseClick()">Cancelar</button>
+            <button mat-flat-button color="primary" [disabled]="!createForm.valid" type="submit">Guardar</button>
+        </div>
+    </form>    
+</div>
+

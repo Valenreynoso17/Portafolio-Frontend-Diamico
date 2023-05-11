@@ -1,0 +1,50 @@
+<div class="main-info-contact-dialog-container">
+    <h4 class="title">Crear Educacion</h4>
+  
+    <hr class="horizontal-line">
+  
+    <form class="form" [formGroup]="createForm" (ngSubmit)="create($event)">
+        <div mat-dialog-content class="dialog-content">
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="educationNameControl">Nombre educacion</mat-label>
+                <input matInput formControlName="educationNameControl" cdkFocusInitial>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="educationDescriptionControl">Descripcion</mat-label>
+                <input matInput formControlName="educationDescriptionControl">
+            </mat-form-field>
+
+            <div class="dates-container">
+                <mat-form-field appearance="outline" class="date">
+                    <mat-label for="educationStartDateControl">Fecha inicio</mat-label>
+                    <input matInput formControlName="educationStartDateControl" [matDatepicker]="educationStartPicker">
+                    <mat-hint>MM/DD/AAAA</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="educationStartPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #educationStartPicker color="primary"></mat-datepicker>
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline" class="date">
+                    <mat-label for="educationEndDateControl">Fecha fin</mat-label>
+                    <input matInput formControlName="educationEndDateControl" [matDatepicker]="educationEndPicker">
+                    <mat-hint>MM/DD/AAAA</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="educationEndPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #educationEndPicker color="primary"></mat-datepicker>
+                </mat-form-field>
+    
+                <mat-checkbox formControlName="educationIsActualControl" color="primary" (change)="toggleActual($event)">Actual?</mat-checkbox>
+            </div>
+
+            <mat-form-field appearance="outline" class="form-field">
+                <mat-label for="educationLinkControl">Link logo</mat-label>
+                <input matInput formControlName="educationLinkControl">
+            </mat-form-field>
+        </div>
+  
+        <div mat-dialog-actions class="dialog-actions">
+            <button mat-button type="button" (click)="onCloseClick()">Cancelar</button>
+            <button mat-flat-button color="primary" [disabled]="!createForm.valid" type="submit">Guardar</button>
+        </div>
+    </form>    
+</div>
+
