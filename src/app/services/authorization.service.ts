@@ -34,23 +34,7 @@ export class AuthorizationService {
               }
               
             })
-          )
-              /* .subscribe((resp: any) => {
-                
-                if(resp != "FAIL") {
-                  console.log(resp);
-                  this.token = resp;
-                  localStorage.setItem("auth_token", resp);
-                  alert("usuario loggeado");
-                } else {
-                  console.log(resp);
-                  
-                }
-                 
-
-                 // this.router.navigate(["profile"]);
-                 //
-              }) */
+          );
    }
 
   logout() {
