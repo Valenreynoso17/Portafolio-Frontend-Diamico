@@ -1,9 +1,15 @@
 <!-- knowledge section -->
 <div class="card section">
   <div class="card-body">
-    <app-card-title titleText="Conocimientos" (editEvent)="onEditEvent()"></app-card-title>
+    <h5 class="card-title">Conocimientos</h5>
     <div class="knowledge-list-containter" >
-      <app-knowledge-item *ngFor="let conocimiento of listaConocimientos" [conocimiento]="conocimiento"></app-knowledge-item>
+      <app-knowledge-item *ngFor="let conocimiento of listaConocimientos" [conocimiento]="conocimiento" (conocimientoEliminadoEvent)="onConocimientoEliminadoEvent($event)"></app-knowledge-item>
+      <div class="knowledge-item" *ngIf="authService.isLoggedIn | async">
+        <div class="knowledge-item-circle" (click)="onAgregarConocimientoClicked()">
+            <img src="../../../assets/masIcon.png" alt="Knowledge Logo" class="knowledge-item-logo">
+        </div>
+        <p class="knowledge-item-name">Agregar</p>
+    </div>
     </div>
   </div>
 </div>

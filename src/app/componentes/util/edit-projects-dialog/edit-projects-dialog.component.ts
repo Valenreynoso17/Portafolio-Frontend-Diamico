@@ -49,7 +49,6 @@ export class EditProjectsDialogComponent {
 
   onEliminarProyectoEvent(proyectoAEliminar: Proyecto) {
     this.listaProyectos = this.listaProyectos.filter(item => item.id != proyectoAEliminar.id);
-    console.log(this.listaProyectos);
   }
 
   @HostListener('document:keydown.escape', ['window:keydown.esc'])

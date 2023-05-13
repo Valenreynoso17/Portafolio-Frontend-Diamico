@@ -1,9 +1,9 @@
 <div class="main-info-contact-dialog-container">
-    <h4 class="title">Editar Conocimiento</h4>
+    <h4 class="title">Agregar Conocimiento</h4>
   
     <hr class="horizontal-line">
   
-    <form class="form" [formGroup]="editForm" (ngSubmit)="edit($event)">
+    <form class="form" [formGroup]="createForm" (ngSubmit)="crear($event)">
         <div mat-dialog-content class="dialog-content">
             <mat-form-field appearance="outline" class="form-field">
                 <mat-label for="knowledgeNameControl">Nombre</mat-label>
@@ -18,8 +18,7 @@
   
         <div mat-dialog-actions class="dialog-actions">
             <button mat-button type="button" (click)="onCloseClick()">Cancelar</button>
-            <button mat-stroked-button color="warn" type="button" (click)="onEliminarClick()">Eliminar</button>
-            <button mat-flat-button color="primary" [disabled]="!editForm.valid" type="submit" cdkFocusInitial>Guardar</button>
+            <button mat-flat-button color="primary" [disabled]="!createForm.valid" type="submit" cdkFocusInitial>Crear</button>
         </div>
     </form>    
 </div>

@@ -8,10 +8,22 @@
 }
 
 .knowledge-item:hover {
-    transform: scale(1.2); 
+    transform: scale(1.1); 
 }
 
-.knowledge-item-circle {
+.knowledge-item-circle-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    border: 1px solid rgb(13, 13, 14);
+    border-radius: 50%;
+    background-color: #e9ecf0;
+    cursor: pointer;
+}
+
+.knowledge-item-circle-no-auth {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +34,20 @@
     background-color: #e9ecf0;
 }
 
-.knowledge-item-circle:hover {
-    opacity: 0.4;
+.knowledge-item-logo {
+    height: 50px;
+    width: 50px;
+}
+
+.knowledge-item-circle-auth:hover .knowledge-item-logo {
+    filter: blur(4px);
+    transition: filter 0.2s ease-in-out;
+}
+
+.knowledge-item-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
 }
 
 .edit-button-container{
@@ -34,26 +58,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: aqua;
 }
 
 #edit-button {
+    display: none;
     position: absolute;
-    height: 40px;
-    width: 40px;
-    opacity: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
 }
 
-#edit-button:hover {
-    opacity: 1;
-}
-
-.knowledge-item-logo {
-    height: 50px;
-    width: 50px;
-}
-
-.knowledge-item-name {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
+.knowledge-item-circle-auth:hover #edit-button {
+    display: block;
 }

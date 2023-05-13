@@ -1,7 +1,7 @@
 <div class="knowledge-item">
-    <div class="knowledge-item-circle">
+    <div [ngClass]="(authService.isLoggedIn | async) ? 'knowledge-item-circle-auth' : 'knowledge-item-circle-no-auth'" (click)="onEditButtonClicked()">
         <img [src]="conocimiento.logo" alt="Knowledge Logo" class="knowledge-item-logo">
-        <img id="edit-button" src="../../../../assets/editar.svg" alt="">
+        <img id="edit-button" src="../../../../assets/editar.svg" alt="" *ngIf="authService.isLoggedIn | async">
     </div>
     <p class="knowledge-item-name">{{conocimiento.nombre}}</p>
 </div>
