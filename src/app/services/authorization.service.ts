@@ -9,7 +9,7 @@ import { tap, map } from 'rxjs/operators';
 })
 export class AuthorizationService {
 
-  private baseApiUrl = "http://localhost:8080";
+  private baseApiUrl = "https://portafoliobackend-valenreynoso17.b4a.run/";
 
   private _isLoggedIn = new BehaviorSubject<boolean>(false);
   isLoggedIn = this._isLoggedIn.asObservable();
@@ -20,7 +20,7 @@ export class AuthorizationService {
    }
 
    login(email: string, password: string) {
-     return this.http.post(this.baseApiUrl + "/autenticar", {id: null, email: email, password: password}, {responseType: 'text'})
+     return this.http.post(this.baseApiUrl + "autenticar", {id: null, email: email, password: password}, {responseType: 'text'})
           .pipe(
             tap(response => {
               if(response != "FAIL") {

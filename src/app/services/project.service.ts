@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 const httpOptionsWithAuth = {
   headers: new HttpHeaders({
     'Content-Type':'application/json',
-    'Access-Control-Allow-Origin':'http://localhost:8080/',
+    'Access-Control-Allow-Origin':'https://portafoliobackend-valenreynoso17.b4a.run/',
     'Authorization':localStorage['auth_token']
   })
 }
@@ -16,7 +16,7 @@ const httpOptionsWithAuth = {
 })
 export class ProjectService {
 
-  private baseApiUrl = "http://localhost:8080/";
+  private baseApiUrl = "https://portafoliobackend-valenreynoso17.b4a.run/";
 
   constructor(private http:HttpClient) { }
 
