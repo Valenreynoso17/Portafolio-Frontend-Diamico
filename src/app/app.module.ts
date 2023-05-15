@@ -17,6 +17,9 @@ import { MatDialogModule,  } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainInfoContactDialogComponent } from './componentes/main-info/main-info-contact-dialog/main-info-contact-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -30,6 +33,15 @@ import { EditProjectsDialogItemComponent } from './componentes/util/edit-project
 import { CreateProjectDialogComponent } from './componentes/util/create-project-dialog/create-project-dialog.component';
 import { EditProjectDialogItemDialogComponent } from './componentes/util/edit-projects-dialog/edit-projects-dialog-item/edit-project-dialog-item-dialog/edit-project-dialog-item-dialog.component';
 import { EditKnowledgeDialogComponent } from './componentes/util/edit-knowledge-dialog/edit-knowledge-dialog.component';
+import { CreateKnowledgeDialogComponent } from './componentes/util/create-knowledge-dialog/create-knowledge-dialog.component';
+import { EditExperiencieDialogComponent } from './componentes/util/edit-experiencie-dialog/edit-experiencie-dialog.component';
+import { EditExperienceDialogItemComponent } from './componentes/util/edit-experiencie-dialog/edit-experience-dialog-item/edit-experience-dialog-item.component';
+import { EditExperienceDialogItemDialogComponent } from './componentes/util/edit-experiencie-dialog/edit-experience-dialog-item/edit-experience-dialog-item-dialog/edit-experience-dialog-item-dialog.component';
+import { CreateExperienceDialogComponent } from './componentes/util/create-experience-dialog/create-experience-dialog.component';
+import { EditEducationDialogComponent } from './componentes/util/edit-education-dialog/edit-education-dialog.component';
+import { CreateEducationDialogComponent } from './componentes/util/create-education-dialog/create-education-dialog.component';
+import { EditEducationDialogItemComponent } from './componentes/util/edit-education-dialog/edit-education-dialog-item/edit-education-dialog-item.component';
+import { EditEducationDialogItemDialogComponent } from './componentes/util/edit-education-dialog/edit-education-dialog-item/edit-education-dialog-item-dialog/edit-education-dialog-item-dialog.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +65,16 @@ import { EditKnowledgeDialogComponent } from './componentes/util/edit-knowledge-
     EditProjectsDialogItemComponent,
     CreateProjectDialogComponent,
     EditProjectDialogItemDialogComponent,
-    EditKnowledgeDialogComponent
+    EditKnowledgeDialogComponent,
+    CreateKnowledgeDialogComponent,
+    EditExperiencieDialogComponent,
+    EditExperienceDialogItemComponent,
+    EditExperienceDialogItemDialogComponent,
+    CreateExperienceDialogComponent,
+    EditEducationDialogComponent,
+    CreateEducationDialogComponent,
+    EditEducationDialogItemComponent,
+    EditEducationDialogItemDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -63,9 +84,12 @@ import { EditKnowledgeDialogComponent } from './componentes/util/edit-knowledge-
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
