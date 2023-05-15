@@ -4,3 +4,12 @@
     background-color: #004aad;
     overflow: auto;
 }
+
+@media only screen and (max-width: 600px) {
+    .main-container {
+        padding: 15px 15px 0px 15px;
+        height: 100%;
+        background-color: #004aad;
+        overflow: auto;
+    }
+}
